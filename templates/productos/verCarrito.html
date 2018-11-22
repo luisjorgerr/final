@@ -1,9 +1,9 @@
 
 {% load staticfiles %}
 <body class="lo">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css ' %}">
-	
-	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+
 	<script type="text/javascript"></script>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
 		<a class="navbar-brand" href="{% url 'home'%}">Shopify</a>
@@ -15,15 +15,15 @@
 				<!--<li class="nav-item active">
 					<a class="nav-link" href="">Productos<span class="sr-only">(current)</span></a>
 				</li>-->
-				
+
 				<li class="nav-item">
 					<a class="nav-link" href="{% url 'agregarProducto'%}">Agregar Nuevo Producto</a>
 				</li>
 				<!--<li class="nav-item">
 					<a class="nav-link" href="{% url 'agregarCategoria'%}">AgregarCategorias</a>
 				</li>-->
-				
-				
+
+
 			</ul>
 		</div>
 	</nav>
@@ -31,7 +31,7 @@
 	{% block content %}
 
 
-	<div class="conteiner py-2">	
+	<div class="conteiner py-2">
 		<div class="row">
 
 			<div class="col-md">
@@ -56,13 +56,13 @@
 						<tr>
 							<th scope="row">{{producto.id}}</th>
 							<th scope="row">{{producto.nombre}}</th>
-							<th scope="row">{{producto.descripcion}}</th> 
+							<th scope="row">{{producto.descripcion}}</th>
 							<th scope="row">${{producto.costo}}</th>
 
-							<th scope="row">{{producto.numeroExistencias}}</th>  
+							<th scope="row">{{producto.numeroExistencias}}</th>
 							 <th class="text-center"><a href="" >eliminar</a></th>
 
-							
+
 
 						{% empty %}
 						<tr>
@@ -72,8 +72,8 @@
 						{% endfor %}
 						<tr>
 							<th colspan="5" class="text-right"><h3 class="font-weight-bold">Total</h3></th>
-						
-						
+
+
 							<th class="text-center"><h3>$ {{total.costo__sum}}</h3></th>
 						</tr>
 						<tr>
@@ -83,16 +83,16 @@
 					</tbody>
 				</table>
 
-				
-				
 
-	
+
+
+
 			</div>
 		</div>
 
 
 	</div>
-	
-</body> 
-<script src="{% static 'js/gracias.js ' %}"></script>
+
+</body>
+<script src="static/js/gracias.js"></script>
 {%endblock%}

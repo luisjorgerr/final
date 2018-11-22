@@ -25,7 +25,7 @@ SECRET_KEY = '3i!*tmehcl8y5b^9=crt!9he&(k0s3ea_0qru-o+%rp9z@rbt^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['luisj.pythonanywhere.com']
 
 
 # Application definition
@@ -77,9 +77,10 @@ WSGI_APPLICATION = 'final.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tiendaBD',
-        'USER': 'root',
-        'HOST': 'localhost',
+        'NAME': 'LuisJ$final',
+        'USER': 'LuisJ',
+        'PASSWORD': 'contrasena',
+        'HOST': 'LuisJ.mysql.pythonanywhere-services.com',
         'PORT' : '3306'
     }
 }
@@ -122,6 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
 STATICFILES_DIRS= [(os.path.join(BASE_DIR,'static/'))]

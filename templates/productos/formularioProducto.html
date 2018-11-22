@@ -5,7 +5,7 @@
 <head>
 	<title>CRUD</title>
 </head>
-<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css ' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
 <body class="">
 
 
@@ -34,25 +34,25 @@
 
 
 
-	
-	<form action="{% url 'agregarProducto'%}" method="post" class="py-4">{% csrf_token %} 
+
+	<form action="{% url 'agregarProducto'%}" method="post" class="py-4">{% csrf_token %}
 		<input type="text" name="nombre" placeholder="nombre"><br>
 		<input type="text" name="descripcion" placeholder="descripcion"><br>
 		<input type="numeric" name="costo" placeholder="costo"><br>
-		
+
 		<input type="numeric" name="numeroExistencias" placeholder="numeroExistencias"><br>
 		<select><br>
 			<option value="enlatados">enlatados</option>
 			<option value="lacteos">lacteos</option>
 			<option value="abarrotes">abarrotes</option>
 		</select>
-		
+
 		<p> disponible<input type="checkbox" name="disponible" placeholder="disponible"></p><br>
-		
+
 		<input type="submit" value="Enviar">
 
 	</form>
-	
-	
+
+
 </body>
 </html>

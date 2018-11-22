@@ -1,7 +1,7 @@
 
 {% load staticfiles %}
 <body class="lo">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css ' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
 		<a class="navbar-brand" href="{% url 'home'%}">Shopify</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,22 +12,22 @@
 				<!--<li class="nav-item active">
 					<a class="nav-link" href="">Productos<span class="sr-only">(current)</span></a>
 				</li>-->
-				
+
 				<li class="nav-item">
 					<a class="nav-link" href="{% url 'agregarProducto'%}">Agregar Nuevo Producto</a>
 				</li>
 				<!--<li class="nav-item">
 					<a class="nav-link" href="{% url 'agregarCategoria'%}">AgregarCategorias</a>
 				</li>-->
-				
-				
+
+
 			</ul>
 		</div>
 	</nav>
 	{% block content %}
 
 
-	<div class="conteiner py-2">	
+	<div class="conteiner py-2">
 		<div class="row">
 
 			<div class="col-md">
@@ -52,10 +52,10 @@
 						<tr>
 							<th scope="row">{{producto.id}}</th>
 							<th scope="row">{{producto.nombre}}</th>
-							<th scope="row">{{producto.descripcion}}</th> 
+							<th scope="row">{{producto.descripcion}}</th>
 							<th scope="row">${{producto.costo}}</th>
 
-							<th scope="row">{{producto.numeroExistencias}}</th>  
+							<th scope="row">{{producto.numeroExistencias}}</th>
 							<th><a href="{% url 'editarProducto' producto.id %}">editar</a></th> <th><a href="{% url 'eliminarProducto' producto.id %}">eliminar</a></th>
 
 						</tr>
@@ -69,13 +69,13 @@
 					</tbody>
 				</table>
 
-				
 
-	
+
+
 			</div>
 		</div>
 
 
 	</div>
-</body> 
+</body>
 {%endblock%}
